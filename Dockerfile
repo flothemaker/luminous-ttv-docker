@@ -3,6 +3,9 @@ FROM alpine:latest
 # Install required utilities: curl and unzip
 RUN apk add --no-cache curl unzip
 
+ENV LUMINOUS_TTV_ADDR=0.0.0.0
+ENV LUMINOUS_TTV_PORT=9595
+
 # Set working directory
 WORKDIR /app
 
