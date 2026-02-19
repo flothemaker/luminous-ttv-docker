@@ -1,6 +1,6 @@
 [package]
 name = "luminous-ttv"
-version = "0.5.8"
+version = "0.5.12"
 authors = ["Malloc Voidstar <1284317+AlyoshaVasilieva@users.noreply.github.com>"]
 edition = "2021"
 repository = "https://github.com/AlyoshaVasilieva/luminous-ttv"
@@ -15,26 +15,26 @@ once_cell = "1.8"
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0.69"
 serde_urlencoded = "0.7.1"
-rand = "0.8.4"
+rand = "0.9.1"
 const_format = "0.2.18"
 url = "2.2.2"
 extend = "1.1.2"
 lazy-regex = { version = "3.0.2", default-features = false, features = ["std", "perf"], optional = true }
 cfg-if = "1.0"
-phf = { version = "0.11.2", features = ["macros"] }
+phf = { version = "0.13.1", features = ["macros"] }
 reqwest-middleware = { version = "0.4", features = ["json"] }
-reqwest-retry = "0.7"
+reqwest-retry = "0.8"
 
 # Only used by Hola code:
 uuid = { version = "1.0", features = ["v4", "serde"], optional = true }
-confy = { version = "0.6.1", optional = true }
+confy = { version = "1.0", optional = true }
 isocountry = { version = "0.3.2", optional = true }
 serde-tuple-vec-map = { version = "1.0", optional = true }
 
 # Axum and related deps
 axum = { version = "0.8.1", features = ["http2", "json"] }
-axum-extra = { version = "0.10", default-features = false, features = ["typed-header"] }
-axum-server = "0.7.1"
+axum-extra = { version = "0.12.1", default-features = false, features = ["typed-header"] }
+axum-server = "0.8"
 tokio = { version = "1.13", features = ["macros", "rt-multi-thread"] }
 tower = { version = "0.5.1", features = ["limit", "load-shed", "timeout", "util"] }
 tower-http = { version = "0.6", features = ["cors", "set-header"] }
@@ -47,6 +47,7 @@ tracing-subscriber = "0.3"
 version = "0.12.4"
 default-features = false
 features = ["rustls-tls", "http2", "gzip", "brotli", "socks", "json"]
+# Twitch serves M3Us gzipped, GQL with brotli
 
 [target.'cfg(windows)'.dependencies]
 nu-ansi-term = "0.50"
