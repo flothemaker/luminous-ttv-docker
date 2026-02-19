@@ -10,7 +10,7 @@ ENV LUMINOUS_TTV_PORT=9595
 WORKDIR /app
 
 # Download and extract the executable from GitHub
-RUN curl -Lo app.zip https://github.com/AlyoshaVasilieva/luminous-ttv/releases/download/v0.5.8/luminous-ttv-0.5.8-x86_64-unknown-linux-musl.zip \
+RUN curl -Lo app.zip https://github.com/AlyoshaVasilieva/luminous-ttv/releases/download/v0.5.12/luminous-ttv-0.5.12-x86_64-unknown-linux-musl.zip \
     && unzip app.zip \
     && rm app.zip
 
