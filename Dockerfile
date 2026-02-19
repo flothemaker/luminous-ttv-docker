@@ -5,7 +5,6 @@ RUN apk add --no-cache curl unzip
 
 ENV LUMINOUS_TTV_ADDR=0.0.0.0
 ENV LUMINOUS_TTV_PORT=9595
-ENV LUMINOUS_TTV_COUNTRY=ru
 
 # Set working directory
 WORKDIR /app
@@ -22,4 +21,5 @@ RUN curl -Lo app.zip https://github.com/AlyoshaVasilieva/luminous-ttv/releases/d
 RUN chmod +x luminous-ttv
 
 # Set the entrypoint (update if your binary name is different)
-CMD ["./luminous-ttv", "--country", "${LUMINOUS_TTV_COUNTRY}"]
+ENTRYPOINT ["./luminous-ttv"]
+CMD ["--country", "ru"]
