@@ -5,7 +5,7 @@ RUN apk add --no-cache curl unzip
 
 ENV LUMINOUS_TTV_ADDR=0.0.0.0
 ENV LUMINOUS_TTV_PORT=9595
-ENV LUMINOUS_TTV_COUNTRY=US
+ENV LUMINOUS_TTV_COUNTRY=ru
 
 # Set working directory
 WORKDIR /app
